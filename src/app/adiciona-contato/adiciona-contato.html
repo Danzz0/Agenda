@@ -1,0 +1,57 @@
+
+
+<h1>Agenda</h1>
+
+
+<form>
+  <div>
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" #nome required>
+  </div>
+
+  <div>
+    <label for="telefone">Telefone: </label>
+    <input type="text" id="telefone" #telefone required>
+  </div>
+
+  <div>
+    <label for="email">Email: </label>
+    <input type="email" id="email" #email required>
+  </div>
+
+  <div>
+    <label for="aniversario">Aniversário: </label>
+    <input type="text" id="aniversario" #aniversario required>
+  </div>
+
+
+  <div>
+    <input
+      type="button"
+      value="Adicionar"
+      (click)="adicionar(nome.value, telefone.value, email.value, aniversario.value)">
+  </div>
+</form>
+
+
+<div class="tableCenter">
+  <table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contato of listaContatos">
+      <td>{{ contato.nome }}</td>
+      <td>{{ contato.telefone }}</td>
+      <td>{{ contato.email }}</td> 
+      <td>{{ contato.aniversario }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+

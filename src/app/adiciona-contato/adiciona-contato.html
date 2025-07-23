@@ -23,13 +23,22 @@
     <label for="aniversario">Aniversário: </label>
     <input type="text" id="aniversario" #aniversario required>
   </div>
+  
+  <div>
+    <label for="tipo">Tipo</label>
+    <select name="tipo" id="tipo" #tp>
+      <option *ngFor=" let t of listaTipo "
+         [value]="t">{{t}}</option>
+      
+    </select>
+  </div>
 
 
   <div>
     <input
       type="button"
       value="Adicionar"
-      (click)="adicionar(nome.value, telefone.value, email.value, aniversario.value)">
+      (click)="adicionar(nome.value, telefone.value, email.value, aniversario.value, tp.value)">
   </div>
 </form>
 
@@ -42,6 +51,7 @@
       <th>Telefone</th>
       <th>Email</th>
       <th>Data</th>
+      <th>Tipo</th>
     </tr>
   </thead>
   <tbody>
@@ -50,6 +60,7 @@
       <td>{{ contato.telefone }}</td>
       <td>{{ contato.email }}</td> 
       <td>{{ contato.aniversario }}</td>
+      <td>{{ contato.tipo }}</td>
     </tr>
   </tbody>
 </table>

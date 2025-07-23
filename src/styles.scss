@@ -39,7 +39,17 @@ input[type="email"] {
   font-size: 1rem;
 }
 
-input[type="button"] {
+input[type="button"]{
+  background-color: #db5334;
+  color: white;
+  padding: 2% 3%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 2%;
+}
+
+input[type="select"] {
   background-color: #db5334;
   color: white;
   padding: 2% 3%;
